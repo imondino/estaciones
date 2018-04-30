@@ -2,10 +2,6 @@
 from flask import Flask, render_template
 import datetime
 import random
-import sys
-
-reload(sys)
-sys.setdefaultencoding('utf8')
 
 app = Flask(__name__)
 
@@ -25,7 +21,7 @@ stops = [
 def index():
 
     station = random.choice(stops)
-    print station
+    print(station)
     return render_template('index.html', station=station)
 
 if __name__ == "__main__":
